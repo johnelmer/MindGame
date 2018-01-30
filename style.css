@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #2a363b;
+  color: white;
+}
+
+div {
+  text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    font: 30px arial;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fecea8;
+    /* border-radius: 10px; */
+    margin-bottom: 10px;
+    /* width: 40%; */
+    text-align: center;
+    display: block;
+    /* margin-left: 30%; */
+    /* border-radius: 10px; */
+}
+
+li a {
+  display: inline-block;
+  color: inherit;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+li.left {
+  float: left;
+}
+
+li.left:hover {
+  color: #d48f58;
+}
+
+li.right {
+  float: right;
+  padding-right: 10px;
+}
+
+li.center {
+  text-align: center;
+}
+
+.questionCard {
+  font: bold 180px arial;
+  text-align: center;
+  height: 200px;
+  width: 40%;
+  margin-left: 30%;
+  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background: #99b898;
+}
+
+body > dir {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+a.button {
+  width: 15%;
+  background-color: #eb4a5f;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding: 16px 32px 16px 32px;
+  font: bold 15px arial;
+}
+a.button:hover {
+  background: #ff847c;
+  color: #eb4a5f;
+}
+
+@media only screen and (min-width: 600px) {
+  a.button {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  a.button {
+    position: relative;
+    float: right;
+  }
+}

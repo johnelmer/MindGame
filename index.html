@@ -1,0 +1,32 @@
+<!-- <!DOCTYPE html> -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mind Games</title>
+    <link rel="stylesheet" href="../FinalProject/style.css">
+    <script type="text/javascript" src="../FinalProject/functionality.js"></script>
+  </head>
+  <body>
+    <div class="menuBar">
+      <ul>
+          <li class="left"><a href="#" id="newGame" onclick="newGame()">NEW GAME</a></li>
+          <li class="center">
+              <span>Score: </span>
+              <span id="score">0</span>
+              <span>Time: </span>
+              <span id="time">60</span>
+          </li>
+          <li class="right" id="highScore"></li>
+      </ul>
+    </div>
+    <canvas id="gameArea" width="400" height="400"></canvas>
+      <!-- <div id="letterQuestion" class="questionCard">
+      </div>
+      <div id="numberQuestion" class="questionCard">
+      </div> -->
+    <div>
+      <a href="#" id="firstButton" onclick="checkAnswer(1)" class="button">Vowel</a>
+      <a href="#" id="secondButton" onclick="checkAnswer(2)" class="button">Consonant</a>
+    </div>
+  </body>
+</html>
