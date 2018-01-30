@@ -7,8 +7,6 @@ var randomNumber;
 var questionNumber;
 var timer;
 var letters = 'AEIOUBCDFGHJKLMNPQRSTVWXYZ';
-var textPosX;
-var textPosY;
 var c;
 var ctx;
 
@@ -61,17 +59,16 @@ function setPosition(text) {
   ctx = c.getContext("2d");
   ctx.font= "bold 180px Arial";
   ctx.fillStyle = "#ffffff";
-  var textWidth = (500 - ctx.measureText(text).width) / 2;
-  textPosX = 390 + textWidth;
+  var textPosX = (c.width - ctx.measureText(text).width) / 2;
   questionNumber = Math.floor(Math.random() * 2);
   if (questionNumber === 0) {
     document.getElementById('firstButton').innerHTML = 'VOWEL';
     document.getElementById('secondButton').innerHTML = 'CONSONANT';
-    ctx.fillText(text,390 + textWidth,165);
+    ctx.fillText(text,textPosX,165);
   } else {
     document.getElementById('firstButton').innerHTML = 'EVEN';
     document.getElementById('secondButton').innerHTML = 'ODD';
-    ctx.fillText(text,390 + textWidth,375);
+    ctx.fillText(text,textPosX,375);
   }
 }
 
@@ -150,14 +147,14 @@ function drawLetterQuestionArea() {
   c = document.getElementById("gameArea");
   ctx = c.getContext("2d");
   ctx.fillStyle = "#99b898";
-  ctx.fillRect(390,0,500,200);
+  ctx.fillRect((c.width - 500) / 2,0,500,200);
 }
 
 function drawNumberQuestionArea() {
   c = document.getElementById("gameArea");
   ctx = c.getContext("2d");
   ctx.fillStyle = "#99b898";
-  ctx.fillRect(390,210,500,200);
+  ctx.fillRect((c.width - 500) / 2,210,500,200);
 }
 
 function checkAnswer(answer) {
