@@ -117,7 +117,7 @@ function newGame() {
   drawNumberQuestionArea();
   generateQuestion();
 }
-//
+
 function gameOver() {
   c = document.getElementById("gameArea");
   ctx = c.getContext("2d");
@@ -161,7 +161,6 @@ function drawNumberQuestionArea() {
 }
 
 function checkAnswer(answer) {
-  // ctx.clearRect(textPosX, textPosY, c.width, c.height);
   streak += 1;
   if (questionNumber == 0) {
     if (randomLetterPosition <= 4 && answer === 1) {
