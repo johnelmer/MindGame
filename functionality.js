@@ -76,28 +76,6 @@ function reset() {
   ctx.clearRect(0, 0, c.width, c. height);
 }
 
-function move() {
-  c = document.getElementById("gameArea");
-  ctx = c.getContext("2d");
-  ctx.fillStyle = "#ffffff";;
-  ctx.fillText('apple',390,184);
-  x += xMov;
-  if (x + 100 > window.innerWidth) {
-    xMov = -1;
-  }
-  if (x < 0) {
-    xMov = 1;
-  }
-  y += yMov;
-  if (y + 100 > window.innerHeight) {
-    yMov = -1;
-  }
-  if (y < 0) {
-    yMov = 1;
-  }
-  ctx.translate(x, y);
-}
-
 function newGame() {
   document.body.onkeydown = function (e) {
     if (e.keyCode == 39) {
